@@ -1,0 +1,68 @@
+.button {
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  font-weight: var(--font-weight-500);
+
+  &:disabled {
+    pointer-events: none;
+  }
+}
+
+.primary {
+  color: var(--button-text-color-primary);
+  background-color: var(--color-purple-700);
+
+  &:hover {
+    background-color: var(--button-background-primary-hover);
+  }
+
+  &:active {
+    background-color: var(--button-background-primary-active);
+  }
+
+  &:focus-visible {
+    border: 1px solid var(--button-border-primary-focus);
+    background-color: var(--button-background-primary-focus)
+  }
+
+  &:disabled {
+    background-color: var(--button-background-primary-disabled);
+  }
+}
+
+.destructive {
+  color: var(--button-text-color-destructive);
+  background-color: var(--button-background-destructive);
+
+  &:hover {
+    background-color: var(--button-background-destructive-hover);
+  }
+
+  &:active {
+    color: var(--button-text-color-destructive-active);
+    background-color: var(--button-background-destructive-active);
+  }
+
+  &:focus-visible {
+    background-color: var(--button-background-destructive-focus)
+  }
+
+  &:disabled {
+    color: var(--button-text-color-destructive-disabled);
+    background-color: var(--button-background-destructive-disabled);
+  }
+}
+
+/* .tertiary {
+  color: #474747;
+  background-color: transparent;
+} */
+
+.l {
+  width: 240px;
+}
+
+.m {
+  width: 170px;
+}

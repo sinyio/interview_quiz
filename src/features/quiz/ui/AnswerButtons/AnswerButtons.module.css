@@ -1,0 +1,28 @@
+.button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background-color: transparent;
+  color: var(--color-black-700);
+  font-weight: var(--font-weight-500);
+
+  &:hover {
+    background-color: var(--color-black-30);
+    color: var(--color-purple-700);
+
+    path {
+      fill: var(--color-purple-700);
+    }
+  }
+}
+
+.active {
+  background-color: var(--color-black-30);
+  color: var(--color-purple-700);
+
+  path {
+    fill: var(--color-purple-700);
+  }
+}

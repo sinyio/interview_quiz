@@ -1,0 +1,19 @@
+.header {
+  padding-block: 40px;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+@media(max-width: 768px) {
+  .header {
+    padding-block: 20px;
+  }
+}
+
+@media(max-width: 480px) {
+  .header {
+    padding-block: 16px;
+  }
+}

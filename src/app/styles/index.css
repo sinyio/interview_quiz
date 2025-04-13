@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+body {
+  min-height: 100vh;
+  font-size: var(--font-size-p-m);
+  font-weight: var(--font-weight-400);
+  font-family: var(--font-family);
+  background-color: var(--color-black-25);
+}
+
+.container {
+  width: 100%;
+  max-width: 1276px;
+  padding-inline: 30px;
+  margin-inline: auto;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding-inline: 16px;
+  }
+}

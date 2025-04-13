@@ -1,0 +1,6 @@
+.title {
+  margin-bottom: 8px;
+  font-weight: var(--font-weight-400);
+  color: var(--color-black-700);
+  font-size: var(--font-size-p-s);
+}

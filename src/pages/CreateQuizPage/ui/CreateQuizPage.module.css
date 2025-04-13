@@ -1,0 +1,18 @@
+.wrapper {
+  flex-basis: 60%;
+}
+
+.title {
+  font-size: var(--font-size-h-s);
+}
+
+.button {
+  align-self: flex-end;
+  padding: 12px;
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: var(--font-size-h-xs);
+  }
+}

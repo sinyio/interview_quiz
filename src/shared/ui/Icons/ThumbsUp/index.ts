@@ -1,0 +1,1 @@
+export { ThumbsUp } from "./ThumbsUp";

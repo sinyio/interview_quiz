@@ -1,0 +1,17 @@
+.title {
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #474747;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.itemImage {
+  /* width: 20px;
+  height: 20px; */
+}

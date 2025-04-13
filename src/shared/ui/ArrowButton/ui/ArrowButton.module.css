@@ -1,0 +1,56 @@
+.button {
+  display: flex;
+  align-items: center;
+  color: var(--link-text-color-primary);
+  font-weight: var(--font-weight-600);
+  background-color: transparent;
+  -webkit-user-select: none;
+
+  div {
+    transition: 0.3s ease transform;
+  }
+
+  &:active {
+    color: var(--link-text-color-primary-active);
+
+    path {
+      stroke: var(--link-text-color-primary-active);
+    }
+  }
+
+  &:focus-visible {
+    color: var(--link-text-color-primary-focus);
+  }
+
+  &:disabled {
+    color: var(--color-black-200);
+    cursor: auto;
+
+    &:hover {
+      div {
+        cursor: auto;
+        transform: none;
+      }
+    }
+
+    path {
+      stroke: var(--color-black-200);
+    }
+  }
+}
+
+.back {
+  &:hover {
+    div {
+      transform: translateX(-5px);
+    }
+  }
+}
+
+.next {
+  &:hover {
+    div {
+      transform: translateX(5px);
+    }
+  }
+}
