@@ -1,6 +1,6 @@
 import { baseApi } from "@/shared/config/api";
 import { GetQuizResponse, GetQuizParams } from "../model/types";
-import { setQuestions, setTotalQuestions } from "../model/quizSlice";
+import { resetQuiz, setQuestions, setTotalQuestions } from "../model/quizSlice";
 
 const quizApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({
@@ -22,6 +22,7 @@ const quizApi = baseApi.injectEndpoints({
           imageSrc: question.imageSrc,
         }));
 
+        dispatch(resetQuiz());
         dispatch(setQuestions(quizQuestions));
         dispatch(setTotalQuestions(data.fullCount));
       },

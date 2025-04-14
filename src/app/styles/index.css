@@ -6,6 +6,7 @@ body {
   font-weight: var(--font-weight-400);
   font-family: var(--font-family);
   background-color: var(--color-black-25);
+  overflow-y: scroll;
 }
 
 .container {

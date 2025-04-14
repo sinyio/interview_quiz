@@ -1,0 +1,9 @@
+.arrow {
+  path {
+    fill: var(--color-purple-700)
+  }
+}
+
+.button {
+  margin-left: auto;
+}

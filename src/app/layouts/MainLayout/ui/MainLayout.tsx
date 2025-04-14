@@ -6,17 +6,15 @@ import { ErrorBoundary } from "@/shared/ui/ErrorBoundary";
 
 export const MainLayout = () => {
   return (
-    <div className={styles.layout}>
-      <div className="container">
-        <Header />
-        <ErrorBoundary>
-          <Suspense fallback={<>Loading...</>}>
-            <main>
-              <Outlet />
-            </main>
-          </Suspense>
-        </ErrorBoundary>
-      </div>
+    <div className="container">
+      <Header />
+      <ErrorBoundary>
+        <Suspense fallback={<>Loading...</>}>
+          <main className={styles.main}>
+            <Outlet />
+          </main>
+        </Suspense>
+      </ErrorBoundary>
     </div>
   );
 };

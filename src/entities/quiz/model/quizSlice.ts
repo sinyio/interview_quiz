@@ -40,6 +40,9 @@ const quizSlice = createSlice({
         isLearned: isLearned,
       };
     },
+    resetQuiz: () => {
+      return initialState;
+    },
   },
 });
 
@@ -48,5 +51,6 @@ export const {
   setQuestions,
   setTotalQuestions,
   markQuestionAsLearned,
+  resetQuiz
 } = quizSlice.actions;
 export const quizReducer = quizSlice.reducer;

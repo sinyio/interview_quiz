@@ -1,11 +1,10 @@
 .chip {
   display: inline-flex;
+  width: fit-content;
   padding: 10px 12px;
   gap: 8px;
   font-weight: var(--font-weight-500);
   color: #303030;
-  border: 1px solid var(--color-black-200);
-  border-radius: 12px;
   cursor: pointer;
   user-select: none;
 }
@@ -19,6 +18,11 @@
     width: 100%;
     -webkit-user-drag: none;
   }
+}
+
+.outline {
+  border: 1px solid var(--color-black-200);
+  border-radius: 12px;
 }
 
 .active {

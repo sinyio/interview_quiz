@@ -1,7 +1,7 @@
 import { IconWrapper } from "@/shared/ui/IconWrapper/ui/IconWrapper";
 import { HTMLAttributes } from "react";
 
-export const ThumbsDowm = ({ ...props }: HTMLAttributes<HTMLDivElement>) => {
+export const ThumbsDown = ({ ...props }: HTMLAttributes<HTMLDivElement>) => {
   return (
     <IconWrapper {...props}>
       <svg

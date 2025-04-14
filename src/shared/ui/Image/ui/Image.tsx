@@ -3,7 +3,7 @@ import styles from "./Image.module.css";
 interface ImageProps {
   imageSrc: string;
   alt: string;
-  className: string;
+  className?: string;
 }
 
 export const Image = ({ imageSrc, alt, className }: ImageProps) => {

@@ -54,6 +54,29 @@
   }
 }
 
+.a {
+  padding: 0;
+  cursor: pointer;
+  display: inline;
+}
+
+.link-purple {
+  color: var(--link-text-color-purple);
+
+  &:hover {
+    color: var(--link-text-color-purple-hover);
+  }
+
+  &:focus-visible {
+    color: var(--link-text-color-purple-focus);
+  }
+
+  &:active {
+    color: var(--link-text-color-purple-active);
+  }
+}
+
+
 /* .tertiary {
   color: #474747;
   background-color: transparent;

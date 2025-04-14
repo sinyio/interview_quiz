@@ -1,0 +1,12 @@
+.image {
+  border-radius: 12px;
+  flex-basis: 154px;
+  height: 110px;
+  flex-shrink: 0;
+}
+
+.title {
+  height: 44px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}

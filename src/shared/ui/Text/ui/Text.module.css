@@ -113,42 +113,42 @@
   font-size: var(--font-size-h-s);
 }
 
-.text-purple-700 {
+.purple-700 {
   color: var(--color-purple-700);
 }
 
-.text-purple-800 {
+.purple-800 {
   color: var(--color-purple-800);
 }
 
-.text-purple-900 {
+.purple-900 {
   color: var(--color-purple-900);
 }
 
-.text-red-100 {
+.red-100 {
   color: var(--color-red-100);
 }
 
-.text-red-600 {
+.red-600 {
   color: var(--color-red-600);
 }
 
-.text-black-600 {
+.black-600 {
   color: var(--color-black-600);
 }
 
-.text-black-700 {
+.black-700 {
   color: var(--color-black-700);
 }
 
-.text-black-800 {
+.black-800 {
   color: var(--color-black-800);
 }
 
-.text-black-900 {
+.black-900 {
   color: var(--color-black-900);
 }
 
-.text-white-900 {
+.white-900 {
   color: var(--color-white-900);
 }

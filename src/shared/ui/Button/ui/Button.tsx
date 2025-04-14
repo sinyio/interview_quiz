@@ -1,34 +1,34 @@
-import {
-  ButtonHTMLAttributes,
-  ReactNode,
-  forwardRef,
-  ForwardRefRenderFunction,
-} from "react";
+import { ButtonHTMLAttributes, ReactNode, forwardRef } from "react";
 import cn from "classnames";
 import styles from "./Button.module.css";
+import { ButtonVariant } from "../model/types";
+import { getTagByVaraiant, tagsByVariants } from "../model/helpers";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
   size?: "l" | "m";
-  variant?: "primary" | "secondary" | "tertiary" | "destructive";
+  variant?: ButtonVariant;
 }
 
-const ButtonComponent: ForwardRefRenderFunction<
-  HTMLButtonElement,
+export const Button = forwardRef<
+  HTMLButtonElement | HTMLAnchorElement,
   ButtonProps
-> = (
-  { children, variant = "primary", size = "l", className, ...props },
-  ref
-) => {
+>(({ children, variant = "primary", size = "l", className, ...props }, ref) => {
+  const element = getTagByVaraiant(variant);
+  const Tag = element as React.ElementType;
+
   return (
-    <button
-      className={cn(styles.button, styles[variant], styles[size], className)}
+    <Tag
       ref={ref}
+      className={cn(
+        styles[tagsByVariants[variant]],
+        styles[variant],
+        element === "button" && styles[size],
+        className
+      )}
       {...props}
     >
       {children}
-    </button>
+    </Tag>
   );
-};
-
-export const Button = forwardRef(ButtonComponent);
+});

@@ -1,0 +1,18 @@
+.wrapper {
+  padding: 10px 12px;
+  border-radius: 12px;
+  color: var(--color-black-700);
+  font-weight: var(--font-weight-500);
+  width: fit-content;
+  pointer-events: none;
+  -webkit-user-select: none;
+}
+
+.active {
+  background-color: var(--color-black-30);
+  color: var(--color-purple-700);
+
+  path {
+    fill: var(--color-purple-700);
+  }
+}
