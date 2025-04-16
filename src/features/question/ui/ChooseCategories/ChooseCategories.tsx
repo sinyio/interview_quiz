@@ -38,8 +38,6 @@ export const ChooseCategories = ({
       isActive: selectedCategories?.includes(skill.id),
     })) || [];
 
-  if (isLoading) return <div>Loading...</div>;
-
   return (
     <div>
       <Filter

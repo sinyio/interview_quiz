@@ -1,12 +1,12 @@
 import { Button } from "@/shared/ui/Button";
 import { Flex } from "@/shared/ui/Flex";
 import { ArrowRight } from "@/shared/ui/Icons/ArrowRight/ArrowRight";
+import { ButtonHTMLAttributes } from "react";
 
-interface StartQuizButtonProps {
-  className?: string;
-}
-
-export const StartQuizButton = ({ className }: StartQuizButtonProps) => {
+export const StartQuizButton = ({
+  className,
+  ...props
+}: ButtonHTMLAttributes<HTMLButtonElement>) => {
   return (
     <Button
       size="m"
@@ -16,6 +16,7 @@ export const StartQuizButton = ({ className }: StartQuizButtonProps) => {
         </Flex>
       }
       className={className}
+      {...props}
     />
   );
 };

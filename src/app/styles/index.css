@@ -12,8 +12,14 @@ body {
 .container {
   width: 100%;
   max-width: 1276px;
-  padding-inline: 30px;
+  padding: 24px 30px;
   margin-inline: auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-block: 20px;
+  }
 }
 
 @media (max-width: 480px) {

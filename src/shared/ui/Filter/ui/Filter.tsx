@@ -8,7 +8,7 @@ type Item = {
   isActive: boolean;
 };
 
-interface FilterProps {
+export interface FilterProps {
   title: string;
   items: Item[];
   onClick: (id: number) => void;

@@ -1,8 +1,8 @@
 .wraper {
   cursor: pointer;
+  width: fit-content;
 }
 
 .title {
   color: var(--color-purple-700);
-
 }

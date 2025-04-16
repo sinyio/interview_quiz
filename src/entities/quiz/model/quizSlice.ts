@@ -5,16 +5,14 @@ interface QuizState {
   currentQuestion: number;
   totalQuestions: number;
   questions: QuizQuestion[];
-  isLoading: boolean;
-  error: string | null;
+  isCompleted: boolean;
 }
 
 const initialState: QuizState = {
   currentQuestion: 1,
   totalQuestions: 1,
   questions: [],
-  isLoading: false,
-  error: null,
+  isCompleted: false,
 };
 
 const quizSlice = createSlice({
@@ -40,6 +38,9 @@ const quizSlice = createSlice({
         isLearned: isLearned,
       };
     },
+    completeQuiz: (state) => {
+      state.isCompleted = true;
+    },
     resetQuiz: () => {
       return initialState;
     },
@@ -51,6 +52,7 @@ export const {
   setQuestions,
   setTotalQuestions,
   markQuestionAsLearned,
-  resetQuiz
+  resetQuiz,
+  completeQuiz
 } = quizSlice.actions;
 export const quizReducer = quizSlice.reducer;

@@ -1,7 +1,13 @@
-import React from 'react'
+import { ButtonHTMLAttributes } from "react";
+import { Button } from "@/shared/ui/Button";
+import styles from "./CompleteQuizButton.module.css";
 
-export const CompleteQuizButton = () => {
+export const CompleteQuizButton = ({
+  ...props
+}: ButtonHTMLAttributes<HTMLButtonElement>) => {
   return (
-    <div>CompleteQuizButton</div>
-  )
-}
+    <Button size="m" variant="destructive" className={styles.button} {...props}>
+      Завершить
+    </Button>
+  );
+};

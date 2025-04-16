@@ -78,6 +78,12 @@
 
 .body4 {
   line-height: 120%;
+  font-weight: var(--font-weight-500);
+  font-size: var(--font-size-p-l);
+}
+
+.body4-accent {
+  line-height: 120%;
   font-weight: var(--font-weight-600);
   font-size: var(--font-size-p-l);
 }

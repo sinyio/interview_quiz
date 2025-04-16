@@ -1,0 +1,19 @@
+.link {
+  color: var(--color-black-700);
+  font-size: var(--font-size-p-m);
+  font-weight: var(--font-weight-500);
+}
+
+.active {
+  color: var(--color-purple-700);
+}
+
+.icon {
+  cursor: auto;
+}
+
+.activeIcon {
+  path {
+    fill: var(--color-purple-700)
+  }
+}
