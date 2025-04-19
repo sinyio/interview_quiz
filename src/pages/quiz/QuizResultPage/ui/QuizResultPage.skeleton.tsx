@@ -2,8 +2,9 @@ import { useScreenSize } from "@/shared/hooks/useSceenSize";
 import { Card } from "@/shared/ui/Card";
 import { Flex } from "@/shared/ui/Flex";
 import { Skeleton } from "@/shared/ui/Skeleton";
+import { withNavSkeleton } from "@/widgets/quiz";
 
-export const QuizResultPageSkeleton = () => {
+export const QuizResultSkeleton = () => {
   const { isMobile, isMobileS } = useScreenSize();
   return (
     <Flex direction="column" gap={isMobileS ? "20" : "24"}>
@@ -49,3 +50,5 @@ export const QuizResultPageSkeleton = () => {
     </Flex>
   );
 };
+
+export const QuizResultPageSkeleton = withNavSkeleton(QuizResultSkeleton);

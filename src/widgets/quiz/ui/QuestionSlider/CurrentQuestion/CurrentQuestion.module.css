@@ -1,6 +1,25 @@
+.title {
+  display: list-item;
+  list-style: disc;
+  margin-left: 22px;
+}
+
+.title::marker {
+  color: var(--color-purple-700);
+}
+
 .image {
   flex-basis: 53%;
   min-height: 358px;
   flex-shrink: 0;
   border-radius: 24px;
+}
+
+@media (max-width: 768px) {
+  .image {
+    min-height: auto;
+    max-height: 398px;
+    flex-basis: 100%;
+    aspect-ratio: 1.74;
+  }
 }

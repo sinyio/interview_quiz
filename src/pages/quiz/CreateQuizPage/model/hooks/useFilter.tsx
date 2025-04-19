@@ -4,7 +4,7 @@ import { useSearchParams } from "react-router-dom";
 interface Filter {
   complexity: number[] | null;
   count: number;
-  skills: number[] | null;
+  skills: number[];
 }
 
 const DEFAULT_COUNT = 10;
@@ -47,7 +47,7 @@ export const useFilter = () => {
         newParams.delete("count");
       }
 
-      if (newFilter?.skills && newFilter.skills.length > 0) {
+      if (newFilter.skills && newFilter.skills.length > 0) {
         newParams.set("skills", newFilter.skills.join(","));
       } else {
         newParams.delete("skills");

@@ -23,7 +23,7 @@ export const ShowAnswer = ({ answer }: ShowAnswerProps) => {
         onClick={() => setIsVisible((prev) => !prev)}
       >
         <Text variant="body2" className={styles.title}>
-          Посмотреть ответ
+          {isVisible ? "Скрыть ответ" : "Посмотреть ответ"}
         </Text>
       </div>
     </Flex>

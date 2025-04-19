@@ -9,7 +9,6 @@ const skillsApi = baseApi.injectEndpoints({
         params,
       }),
       providesTags: ["Skills"],
-      keepUnusedDataFor: 0,
     }),
   }),
 });

@@ -1,6 +1,8 @@
 .chip {
   display: inline-flex;
+  align-items: center;
   width: fit-content;
+  height: 39px;
   padding: 10px 12px;
   gap: 8px;
   font-weight: var(--font-weight-500);
@@ -11,8 +13,8 @@
 
 .icon {
   display: flex;
-  max-width: 20px;
-  aspect-ratio: 1 / 1;
+  width: 20px;
+  height: 20px;
 
   img {
     width: 100%;
@@ -31,6 +33,7 @@
 
 @media (max-width: 480px) {
   .chip {
+    height: 37px;
     font-size: var(--font-size-p-s);
   }
 }

@@ -8,7 +8,7 @@ export const HeaderSkeleton = () => {
 
   return (
     <Flex justify="between" align="center" className={styles.header}>
-      <Flex gap="20" align="center">
+      <Flex gap="48" align="center">
         <Skeleton width={140} height={34} />
         {(isDesktop || isLaptop) && (
           <Flex gap="20">
@@ -19,7 +19,7 @@ export const HeaderSkeleton = () => {
       </Flex>
       {(isDesktop || isLaptop) && (
         <Flex gap="24" align="center">
-          <Skeleton width={40} height={20} />
+          <Skeleton width={50} height={20} />
           <Skeleton width={170} height={48} borderRadius={12} />
         </Flex>
       )}

@@ -11,28 +11,22 @@ import { Flex } from "@/shared/ui/Flex";
 import { useScreenSize } from "@/shared/hooks/useSceenSize";
 import { useNavigate } from "react-router-dom";
 import { StartQuizButton } from "@/features/quiz";
-import styles from "./CreateQuizPage.module.css";
 import { useGetSkillsQuery } from "@/entities/skill";
 import { CreateQuizPageSkeleton } from "./CreateQuizPage.skeleton";
+import { useFilterHandlers } from "../model/hooks/useFilterHandlers";
+import styles from "./CreateQuizPage.module.css";
 
 const CreateQuizPage = () => {
-  const { filter, updateFilter } = useFilter();
-  const { isMobile, isMobileS } = useScreenSize();
   const navigate = useNavigate();
+  const { isMobile, isMobileS } = useScreenSize();
 
-  const { isLoading } = useGetSkillsQuery({});
+  const { data: skills, isLoading } = useGetSkillsQuery({
+    specializations: [11],
+  });
 
-  const onChangeSkills = (skills: number[]) => {
-    updateFilter({ ...filter, skills: skills });
-  };
-
-  const onChangeComplexity = (complexity: number[]) => {
-    updateFilter({ ...filter, complexity: complexity });
-  };
-
-  const onChangeCount = (count: number) => {
-    updateFilter({ ...filter, count: count });
-  };
+  const { filter } = useFilter();
+  const { onChangeSkills, onChangeComplexity, onChangeCount } =
+    useFilterHandlers();
 
   const onStartQuiz = async () => {
     navigate("/quiz", {
@@ -45,6 +39,8 @@ const CreateQuizPage = () => {
     });
   };
 
+  if (isLoading) return <CreateQuizPageSkeleton />;
+
   return (
     <Card>
       <Flex direction="column" gap={isMobileS ? "24" : "48"}>
@@ -53,14 +49,14 @@ const CreateQuizPage = () => {
             Собеседование
           </Text>
           <Flex
-            gap={isMobileS ? "16" : "48"}
+            gap={isMobileS ? "16" : isMobile ? "24" : "48"}
             direction={isMobile ? "column" : "row"}
           >
             <div className={styles.wrapper}>
               <ChooseCategories
+                skills={skills?.data}
                 onChange={onChangeSkills}
                 selectedCategories={filter.skills}
-                specialization={11}
               />
             </div>
             <Flex direction="column" gap={isMobileS ? "16" : "24"}>

@@ -10,3 +10,10 @@
   overflow-y: scroll;
   scrollbar-width: none;
 }
+
+@media (max-width: 480px) {
+  .image {
+    flex-basis: 101px;
+    height: 90px;
+  }
+}

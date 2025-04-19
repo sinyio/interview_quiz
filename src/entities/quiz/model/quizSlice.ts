@@ -53,6 +53,6 @@ export const {
   setTotalQuestions,
   markQuestionAsLearned,
   resetQuiz,
-  completeQuiz
+  completeQuiz,
 } = quizSlice.actions;
 export const quizReducer = quizSlice.reducer;

@@ -6,9 +6,15 @@ interface CounterProps {
   count: number;
   onChange: (count: number) => void;
   maxCount?: number;
+  className?: string;
 }
 
-export const Counter = ({ count, onChange, maxCount = 100 }: CounterProps) => {
+export const Counter = ({
+  count,
+  onChange,
+  maxCount = 100,
+  className,
+}: CounterProps) => {
   const handleIncrement = () => {
     onChange(count === maxCount ? maxCount : count + 1);
   };
@@ -18,7 +24,7 @@ export const Counter = ({ count, onChange, maxCount = 100 }: CounterProps) => {
   };
 
   return (
-    <div className={styles.counter}>
+    <div className={`${styles.counter} ${className}`}>
       <Minus onClick={handleDecrement} />
       <div className={styles.count}>{count}</div>
       <Plus onClick={handleIncrement} />

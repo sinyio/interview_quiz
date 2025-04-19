@@ -1,3 +1,4 @@
+import { useScreenSize } from "@/shared/hooks/useSceenSize";
 import { Button } from "@/shared/ui/Button";
 import { Flex } from "@/shared/ui/Flex";
 import { ClipboardText } from "@/shared/ui/Icons/ClipboardText";
@@ -7,8 +8,10 @@ import { UserSwitch } from "@/shared/ui/Icons/UserSwitch";
 import { Text } from "@/shared/ui/Text";
 
 export const Links = () => {
+  const { isMobileS } = useScreenSize();
+
   return (
-    <Flex gap="16">
+    <Flex gap={isMobileS ? "8" : "16"} direction={isMobileS ? "column" : "row"}>
       <Flex gap="8" direction="column">
         <Button variant="link-purple">
           <Flex gap="8" align="center">

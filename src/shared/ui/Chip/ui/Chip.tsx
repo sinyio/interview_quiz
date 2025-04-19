@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { HTMLAttributes, ReactNode } from "react";
 import cn from "classnames";
 import styles from "./Chip.module.css";
 
@@ -16,7 +16,8 @@ export const Chip = ({
   isActive = false,
   outline = true,
   onClick,
-}: ChipProps) => {
+  ...props
+}: ChipProps & HTMLAttributes<HTMLDivElement>) => {
   return (
     <div
       onClick={onClick}
@@ -24,6 +25,7 @@ export const Chip = ({
         [styles.active]: isActive,
         [styles.outline]: outline,
       })}
+      {...props}
     >
       {icon && <div className={styles.icon}>{icon}</div>}
       <p>{label}</p>

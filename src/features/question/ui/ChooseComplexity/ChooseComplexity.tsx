@@ -1,7 +1,7 @@
 import { Filter } from "@/shared/ui/Filter";
 
 interface ChooseComplexityProps {
-  selectedComplexity: number[];
+  selectedComplexity: number[] | null;
   onChange: (complexity?: number[]) => void;
 }
 
@@ -30,9 +30,10 @@ export const ChooseComplexity = ({
   const preparedData = complexity.map((item) => ({
     id: item.id,
     title: item.title,
-    isActive: selectedComplexity?.some((selectedItem) =>
-      item.value.includes(selectedItem)
-    ),
+    isActive:
+      selectedComplexity?.some((selectedItem) =>
+        item.value.includes(selectedItem)
+      ) || false,
   }));
 
   return (

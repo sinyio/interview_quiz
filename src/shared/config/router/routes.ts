@@ -3,6 +3,6 @@ export const ROUTES = {
   quiz: {
     create: "/create-quiz",
     page: "/quiz",
-    result: "quiz-result",
+    result: "/quiz-result",
   },
 };

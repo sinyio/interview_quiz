@@ -2,6 +2,7 @@ import { Flex } from "@/shared/ui/Flex";
 import { Image } from "@/shared/ui/Image";
 import { Text } from "@/shared/ui/Text";
 import { IsLearnedChip } from "@/entities/quiz";
+import { useScreenSize } from "@/shared/hooks/useSceenSize";
 import styles from "./PassedQuestionsItem.module.css";
 
 interface PassedQuestionsItemProps {
@@ -15,11 +16,17 @@ export const PassedQuestionsItem = ({
   title,
   isLearned,
 }: PassedQuestionsItemProps) => {
+  const { isMobileS } = useScreenSize();
+
   return (
     <Flex gap="20">
       <Image imageSrc={imageSrc} alt={title} className={styles.image} />
       <Flex gap="8" direction="column">
-        <Text variant="body4" color="black-800" className={styles.title}>
+        <Text
+          variant={isMobileS ? "body3-accent" : "body4"}
+          color="black-800"
+          className={styles.title}
+        >
           {title}
         </Text>
         {isLearned ? <IsLearnedChip learned active /> : <IsLearnedChip />}

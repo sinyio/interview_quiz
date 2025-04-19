@@ -12,9 +12,10 @@ export interface FilterProps {
   title: string;
   items: Item[];
   onClick: (id: number) => void;
+  height?: number;
 }
 
-export const Filter = ({ title, items, onClick }: FilterProps) => {
+export const Filter = ({ title, items, onClick, height }: FilterProps) => {
   return (
     <div>
       <h3 className={styles.title}>{title}</h3>
@@ -22,9 +23,14 @@ export const Filter = ({ title, items, onClick }: FilterProps) => {
         {items?.map((item) => (
           <Chip
             label={item.title}
-            icon={item.imageSrc && <img src={item.imageSrc} alt={item.title} />}
+            icon={
+              item.imageSrc && (
+                <img src={item.imageSrc} alt={item.title} loading="lazy" />
+              )
+            }
             isActive={item.isActive}
             onClick={() => onClick(item.id)}
+            style={height ? { height: `${height}px` } : {}}
             key={item.id}
           />
         ))}

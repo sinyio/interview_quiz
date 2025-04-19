@@ -7,6 +7,7 @@ interface QuizNavigationItemProps {
   path: string;
   name: string;
   isFirst: boolean;
+  backArrow: boolean
 }
 
 export const QuizNavigationItem = ({

@@ -1,24 +1,17 @@
-import { useGetSkillsQuery } from "@/entities/skill";
+import { Skill } from "@/entities/skill";
 import { Filter } from "@/shared/ui/Filter";
 
 interface ChooseCategoriesProps {
+  skills?: Skill[];
   selectedCategories: number[];
   onChange: (skills: number[]) => void;
-  limit?: number;
-  specialization: number;
 }
 
 export const ChooseCategories = ({
+  skills,
   selectedCategories,
   onChange,
-  limit,
-  specialization,
 }: ChooseCategoriesProps) => {
-  const { data: skills, isLoading } = useGetSkillsQuery({
-    limit,
-    specializations: [specialization],
-  });
-
   const onChooseCategories = (id: number) => {
     if (selectedCategories?.includes(id)) {
       const filteredCategories = selectedCategories.filter(
@@ -31,11 +24,11 @@ export const ChooseCategories = ({
   };
 
   const preparedData =
-    skills?.data.map((skill) => ({
+    skills?.map((skill) => ({
       id: skill.id,
       title: skill.title,
       imageSrc: skill.imageSrc,
-      isActive: selectedCategories?.includes(skill.id),
+      isActive: selectedCategories?.includes(skill.id) || false,
     })) || [];
 
   return (
@@ -44,6 +37,7 @@ export const ChooseCategories = ({
         items={preparedData}
         onClick={onChooseCategories}
         title="Категории вопросов"
+        height={40}
       />
     </div>
   );

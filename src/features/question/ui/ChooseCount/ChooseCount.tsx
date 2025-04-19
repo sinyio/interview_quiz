@@ -10,7 +10,7 @@ export const ChooseCount = ({ count, onChange }: ChooseCountProps) => {
   return (
     <div>
       <h3 className={styles.title}>Количество вопросов</h3>
-      <Counter count={count} onChange={onChange} />
+      <Counter count={count} onChange={onChange} className={styles.counter} />
     </div>
   );
 };

@@ -7,8 +7,12 @@ import { Flex } from "@/shared/ui/Flex";
 import { Separator } from "@/shared/ui/Separator";
 import { useNavigate } from "react-router-dom";
 import { CurrentQuestion } from "./CurrentQuestion/CurrentQuestion";
+import { useScreenSize } from "@/shared/hooks/useSceenSize";
+import { ROUTES } from "@/shared/config/router/routes";
 
 export const QuestionSlider = () => {
+  const { isMobileS } = useScreenSize();
+
   const questions = useAppSelector((state) => state.quiz.questions);
   const currentQuestion = useAppSelector((state) => state.quiz.currentQuestion);
 
@@ -17,12 +21,12 @@ export const QuestionSlider = () => {
 
   const onCompleteQuiz = () => {
     dispatch(completeQuiz());
-    navigate("/quiz-result");
+    navigate(ROUTES.quiz.result);
   };
 
   return (
     <Card>
-      <Flex direction="column" gap="24">
+      <Flex direction="column" gap={isMobileS ? "16" : "24"}>
         <SwitchQuestion />
         <CurrentQuestion question={questions[currentQuestion - 1]} />
         <Separator />
