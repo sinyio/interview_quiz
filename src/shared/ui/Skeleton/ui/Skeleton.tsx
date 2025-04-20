@@ -2,6 +2,7 @@ import styles from "./Skeleton.module.css";
 
 interface SkeletonBlockProps {
   width?: string | number;
+  maxWidth?: string | number;
   height?: string | number;
   borderRadius?: string | number;
   style?: React.CSSProperties;
@@ -9,8 +10,9 @@ interface SkeletonBlockProps {
 }
 
 export const Skeleton = ({
-  width,
+  width = "100%",
   height,
+  maxWidth,
   borderRadius = "8px",
   style = {},
   className = "",
@@ -18,7 +20,7 @@ export const Skeleton = ({
   return (
     <div
       className={`${styles.skeleton} ${className}`}
-      style={{ width, height, borderRadius, ...style }}
+      style={{ width, maxWidth, height, borderRadius, ...style }}
     />
   );
 };

@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import { MainLayout } from "./layouts/MainLayout";
 import { CreateQuizPage } from "@/pages/quiz/CreateQuizPage";
-import { QuizQuestionsPage } from "@/pages/quiz/QuizQuestionsPage";
+import { QuizPage } from "@/pages/quiz/QuizPage";
 import { QuizResultPage } from "@/pages/quiz/QuizResultPage";
 import { MainPage } from "@/pages/MainPage";
 import { QuizLayout } from "./layouts/QuizLayout";
@@ -18,7 +18,7 @@ export const router = createBrowserRouter([
         element: <QuizLayout />,
         children: [
           { path: ROUTES.quiz.create, element: <CreateQuizPage /> },
-          { path: ROUTES.quiz.page, element: <QuizQuestionsPage /> },
+          { path: ROUTES.quiz.page, element: <QuizPage /> },
           { path: ROUTES.quiz.result, element: <QuizResultPage /> },
         ],
       },

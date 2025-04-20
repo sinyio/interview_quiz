@@ -6,3 +6,4 @@ export { ShowAnswer } from "./ui/ShowAnswer/ShowAnswer";
 export { RestartQuizButton } from "./ui/RestartQuizButton/RestartQuizButton";
 export { SwitchQuestionSkeleton } from "./ui/SwitchQuestion/SwitchQuestion.skeleton";
 export { CompleteQuizButtonSkeleton } from "./ui/CompleteQuizButton/CompleteQuizButton.skeleton";
+export { RestartQuizButtonSkeleton } from "./ui/RestartQuizButton/RestartQuizButton.skeleton";

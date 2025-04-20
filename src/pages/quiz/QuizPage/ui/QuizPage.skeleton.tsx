@@ -1,9 +1,12 @@
 import { useScreenSize } from "@/shared/hooks/useSceenSize";
 import { Flex } from "@/shared/ui/Flex";
-import { QuizProgressSkeleton, withNavSkeleton } from "@/widgets/quiz";
-import { QuestionSliderSkeleton } from "@/widgets/quiz/ui/QuestionSlider/QuestionSlider.skeleton";
+import {
+  QuestionSliderSkeleton,
+  QuizProgressSkeleton,
+  withNavSkeleton,
+} from "@/widgets/quiz";
 
-const QuizQuestionsSkeleton = () => {
+const QuizSkeleton = () => {
   const { isMobile, isMobileS } = useScreenSize();
   return (
     <Flex direction="column" gap={isMobileS ? "16" : isMobile ? "20" : "24"}>
@@ -13,4 +16,4 @@ const QuizQuestionsSkeleton = () => {
   );
 };
 
-export const QuizQuestionsPageSkeleton = withNavSkeleton(QuizQuestionsSkeleton);
+export const QuizPageSkeleton = withNavSkeleton(QuizSkeleton);

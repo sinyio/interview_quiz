@@ -6,14 +6,11 @@ import { Text } from "@/shared/ui/Text";
 import { ArrowRight } from "@/shared/ui/Icons/ArrowRight";
 import { Links } from "./Links";
 import styles from "./JoinYeaHub.module.css";
+import { HTMLAttributes } from "react";
 
-interface JoinYeaHubProps {
-  className?: string;
-}
-
-export const JoinYeaHub = ({ className }: JoinYeaHubProps) => {
+export const JoinYeaHub = ({ ...props }: HTMLAttributes<HTMLDivElement>) => {
   return (
-    <Card className={className}>
+    <Card {...props}>
       <Flex gap="16" direction="column">
         <Flex gap="12" direction="column">
           <Flex gap="10" align="center">

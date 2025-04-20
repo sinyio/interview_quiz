@@ -1,4 +1,4 @@
-import { store } from "@/app/store/appStore";
+import { store } from "@/app/appStore";
 import { TypedUseSelectorHook, useSelector } from "react-redux";
 
 type RootState = ReturnType<typeof store.getState>;

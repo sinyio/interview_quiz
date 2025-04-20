@@ -2,7 +2,7 @@ import { useEffect, useMemo } from "react";
 import { useSearchParams } from "react-router-dom";
 
 interface Filter {
-  complexity: number[] | null;
+  complexity: number[];
   count: number;
   skills: number[];
 }
@@ -20,7 +20,7 @@ export const useFilter = () => {
 
   const filter: Filter = useMemo(() => {
     const complexity =
-      searchParams.get("complexity")?.split(",").map(Number) ?? null;
+      searchParams.get("complexity")?.split(",").map(Number) ?? [];
     const count = Number(searchParams.get("count")) || DEFAULT_COUNT;
     const skills = searchParams.get("skills")?.split(",").map(Number) ?? [];
 
@@ -35,7 +35,7 @@ export const useFilter = () => {
     setSearchParams((prev) => {
       const newParams = new URLSearchParams(prev);
 
-      if (newFilter.complexity) {
+      if (newFilter.complexity && newFilter.complexity.length > 0) {
         newParams.set("complexity", newFilter.complexity.join(","));
       } else {
         newParams.delete("complexity");

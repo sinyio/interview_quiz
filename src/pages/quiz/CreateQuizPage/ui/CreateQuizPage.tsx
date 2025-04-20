@@ -14,27 +14,37 @@ import { StartQuizButton } from "@/features/quiz";
 import { useGetSkillsQuery } from "@/entities/skill";
 import { CreateQuizPageSkeleton } from "./CreateQuizPage.skeleton";
 import { useFilterHandlers } from "../model/hooks/useFilterHandlers";
+import { ROUTES } from "@/shared/config/router/routes";
 import styles from "./CreateQuizPage.module.css";
 
+const FRONTEND_DEVELOPER_SPECIALIZATION_ID = 11;
+
 const CreateQuizPage = () => {
-  const navigate = useNavigate();
   const { isMobile, isMobileS } = useScreenSize();
 
+  const navigate = useNavigate();
+
   const { data: skills, isLoading } = useGetSkillsQuery({
-    specializations: [11],
+    specializations: [FRONTEND_DEVELOPER_SPECIALIZATION_ID],
   });
 
   const { filter } = useFilter();
   const { onChangeSkills, onChangeComplexity, onChangeCount } =
     useFilterHandlers();
 
-  const onStartQuiz = async () => {
-    navigate("/quiz", {
+  const onStartQuiz = () => {
+    navigate(ROUTES.quiz.page, {
       state: {
-        skills: filter.skills,
-        complexity: filter.complexity,
+        skills:
+          filter.skills.length > 0
+            ? filter.skills
+            : skills?.data.map((skill) => skill.id),
+        complexity:
+          filter.complexity.length > 0
+            ? filter.complexity
+            : [1, 2, 3, 4, 5, 6, 7, 8, 9],
         limit: filter.count,
-        specialization: 11,
+        specialization: FRONTEND_DEVELOPER_SPECIALIZATION_ID,
       },
     });
   };

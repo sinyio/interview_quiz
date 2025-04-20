@@ -22,12 +22,9 @@ export const QuizNavigation = () => {
     .filter(
       (item) =>
         !(
+          !isMobile &&
           location.pathname === ROUTES.quiz.result &&
           item.path === ROUTES.quiz.page
-        ) ||
-        !(
-          location.pathname === ROUTES.quiz.page &&
-          item.path === ROUTES.quiz.result
         )
     )
     .slice(isMobile ? currentPathIndex : 0, currentPathIndex + 1);

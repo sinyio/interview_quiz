@@ -5,3 +5,6 @@ export { QuizNavigationSkeleton } from "./ui/QuizNavigation/QuizNavigation.skele
 export { withNavSkeleton } from "./model/hocs/withNavSkeleton";
 export { CurrentQuestionSkeleton } from "./ui/QuestionSlider/CurrentQuestion/CurrentQuestion.skeleton";
 export { QuizProgressSkeleton } from "./ui/QuizProgress/QuizProgress.skeleton";
+export { QuestionSliderSkeleton } from "./ui/QuestionSlider/QuestionSlider.skeleton";
+export { PassedQuestionsList } from "./ui/PassedQuestionsList/PassedQuestionsList";
+export { PassedQuestionsListSkeleton } from "./ui/PassedQuestionsList/PassedQuestionsList.skeleton";

@@ -1,8 +1,8 @@
 import { Text } from "@/shared/ui/Text";
-import styles from "./ShowAnswer.module.css";
 import { Flex } from "@/shared/ui/Flex";
 import { useEffect, useState } from "react";
 import { TextHtml } from "@/shared/ui/TextHtml";
+import styles from "./ShowAnswer.module.css";
 
 interface ShowAnswerProps {
   answer: string;
