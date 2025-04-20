@@ -5,7 +5,7 @@ interface ChooseComplexityProps {
   onChange: (complexity?: number[]) => void;
 }
 
-const complexity = [
+const complexityRanges = [
   { id: 1, title: "1-3", value: [1, 2, 3] },
   { id: 2, title: "4-6", value: [4, 5, 6] },
   { id: 3, title: "7-8", value: [7, 8] },
@@ -17,22 +17,25 @@ export const ChooseComplexity = ({
   onChange,
 }: ChooseComplexityProps) => {
   const onChooseComplexity = (id: number) => {
-    const newValues = complexity.find((item) => item.id === id)?.value || [];
-    const isDataExist = selectedComplexity?.some((item) =>
-      newValues.includes(item)
-    );
-    const updates = isDataExist
-      ? (selectedComplexity || []).filter((item) => !newValues.includes(item))
-      : [...(selectedComplexity || []), ...newValues];
-    onChange(updates.length === 0 ? undefined : updates);
+    const range = complexityRanges.find((item) => item.id === id)?.value || [];
+    const updates = selectedComplexity
+      ? selectedComplexity.some((item) => range.includes(item))
+        ? selectedComplexity.filter((item) => !range.includes(item))
+        : [
+            ...selectedComplexity,
+            ...range.filter((num) => !selectedComplexity.includes(num)),
+          ]
+      : [...range];
+
+    onChange(updates.length > 0 ? updates : undefined);
   };
 
-  const preparedData = complexity.map((item) => ({
-    id: item.id,
-    title: item.title,
+  const preparedData = complexityRanges.map(({ id, title, value }) => ({
+    id,
+    title,
     isActive:
       selectedComplexity?.some((selectedItem) =>
-        item.value.includes(selectedItem)
+        value.includes(selectedItem)
       ) || false,
   }));
 
