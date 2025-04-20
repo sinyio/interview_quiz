@@ -4,9 +4,9 @@ import { Flex } from "@/shared/ui/Flex";
 import { SealCheck } from "@/shared/ui/Icons/SealCheck";
 import { Text } from "@/shared/ui/Text";
 import { ArrowRight } from "@/shared/ui/Icons/ArrowRight";
-import { Links } from "./Links";
-import styles from "./JoinYeaHub.module.css";
+import { Links } from "./Links/Links";
 import { HTMLAttributes } from "react";
+import styles from "./JoinYeaHub.module.css";
 
 export const JoinYeaHub = ({ ...props }: HTMLAttributes<HTMLDivElement>) => {
   return (

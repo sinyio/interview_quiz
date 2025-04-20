@@ -1,7 +1,7 @@
 import { Flex } from "@/shared/ui/Flex";
 import { Image } from "@/shared/ui/Image";
 import { Text } from "@/shared/ui/Text";
-import { IsLearnedChip } from "@/entities/quiz";
+import { IsLearnedChip } from "@/entities/question";
 import { useScreenSize } from "@/shared/hooks/useSceenSize";
 import styles from "./PassedQuestionsItem.module.css";
 

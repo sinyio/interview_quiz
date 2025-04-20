@@ -1,5 +1,5 @@
 import { Card } from "@/shared/ui/Card";
-import { Links } from "./Links";
+import { Links } from "./Links/Links";
 import { Text } from "@/shared/ui/Text";
 import { Flex } from "@/shared/ui/Flex";
 import { HTMLAttributes } from "react";

@@ -1,5 +1,5 @@
 import { Flex } from "@/shared/ui/Flex";
-import { IsLearnedChip } from "@/entities/quiz";
+import { IsLearnedChip } from "@/entities/question";
 import styles from "./AnswerButtons.module.css";
 import { useScreenSize } from "@/shared/hooks/useSceenSize";
 
