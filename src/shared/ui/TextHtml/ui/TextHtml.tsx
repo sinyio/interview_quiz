@@ -1,7 +1,4 @@
 import DOMPurify from "dompurify";
-
-import { Text } from "@/shared/ui/Text";
-
 import styles from "./TextHtml.module.css";
 
 export interface TextHtmlProps {
@@ -9,14 +6,12 @@ export interface TextHtmlProps {
   className?: string;
 }
 
-export const TextHtml = ({ className, html }: TextHtmlProps) => {
+export const TextHtml = ({ html, className }: TextHtmlProps) => {
   const sanitizedHtmlContent = DOMPurify.sanitize(html);
 
   return (
     <pre className={`${styles.text} ${className}`}>
-      <Text variant="body3-accent" color="black-800">
-        <div dangerouslySetInnerHTML={{ __html: sanitizedHtmlContent }} />
-      </Text>
+      <div dangerouslySetInnerHTML={{ __html: sanitizedHtmlContent }} />
     </pre>
   );
 };

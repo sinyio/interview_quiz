@@ -16,8 +16,6 @@ export const QuizPage = () => {
   if (!location.state) return <Navigate to={ROUTES.quiz.create} replace />;
   if (isLoading) return <QuizPageSkeleton />;
 
-  console.log(location.state);
-
   return (
     <Flex direction="column" gap={isMobileS ? "16" : isMobile ? "20" : "24"}>
       <QuizProgress />

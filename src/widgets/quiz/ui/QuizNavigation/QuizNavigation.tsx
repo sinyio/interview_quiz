@@ -16,8 +16,6 @@ export const QuizNavigation = () => {
     (item) => item.path === location.pathname
   );
 
-  console.log(currentPathIndex, currentPathIndex + 1);
-
   const filteredNavigation = quizNavigation
     .filter(
       (item) =>

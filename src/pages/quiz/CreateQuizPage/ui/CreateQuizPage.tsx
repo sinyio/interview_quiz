@@ -18,6 +18,7 @@ import { ROUTES } from "@/shared/config/router/routes";
 import styles from "./CreateQuizPage.module.css";
 
 const FRONTEND_DEVELOPER_SPECIALIZATION_ID = 11;
+const COMPLEXITY_LIST = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 const CreateQuizPage = () => {
   const { isMobile, isMobileS } = useScreenSize();
@@ -40,9 +41,7 @@ const CreateQuizPage = () => {
             ? filter.skills
             : skills?.data.map((skill) => skill.id),
         complexity:
-          filter.complexity.length > 0
-            ? filter.complexity
-            : [1, 2, 3, 4, 5, 6, 7, 8, 9],
+          filter.complexity.length > 0 ? filter.complexity : COMPLEXITY_LIST,
         limit: filter.count,
         specialization: FRONTEND_DEVELOPER_SPECIALIZATION_ID,
       },
