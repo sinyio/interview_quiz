@@ -1,5 +1,4 @@
 import { completeQuiz } from "@/entities/quiz";
-import { CompleteQuizButton, SwitchQuestion } from "@/features/quiz";
 import { useAppDispatch } from "@/shared/hooks/useAppDispatch";
 import { useAppSelector } from "@/shared/hooks/useAppSelector";
 import { Card } from "@/shared/ui/Card";
@@ -9,6 +8,8 @@ import { useNavigate } from "react-router-dom";
 import { CurrentQuestion } from "./CurrentQuestion/CurrentQuestion";
 import { useScreenSize } from "@/shared/hooks/useSceenSize";
 import { ROUTES } from "@/shared/config/router/routes";
+import { SwitchQuestion } from "@/features/quiz/SwitchQuestion";
+import { CompleteQuizButton } from "@/features/quiz/CompleteQuizButton";
 
 export const QuestionSlider = () => {
   const { isMobileS } = useScreenSize();

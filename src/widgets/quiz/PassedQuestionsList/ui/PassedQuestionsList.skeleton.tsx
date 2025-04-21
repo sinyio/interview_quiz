@@ -1,7 +1,7 @@
 import { Skeleton } from "@/shared/ui/Skeleton";
 import { PassedQuestionsItemSkeleton } from "./PassedQuestionsItem/PassedQuestionsItem.skeleton";
 import { Card } from "@/shared/ui/Card";
-import { RestartQuizButtonSkeleton } from "@/features/quiz";
+import { RestartQuizButtonSkeleton } from "@/features/quiz/RestartQuizButton";
 import styles from "./PassedQuestionsList.module.css";
 
 export const PassedQuestionsListSkeleton = () => {

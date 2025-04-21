@@ -1,15 +1,13 @@
-import {
-  ChooseCategoriesSkeleton,
-  ChooseComplexitySkeleton,
-  ChooseCountSkeleton,
-  ChooseModeSkeleton,
-} from "@/features/question";
 import { Card } from "@/shared/ui/Card";
 import { Flex } from "@/shared/ui/Flex";
 import { Skeleton } from "@/shared/ui/Skeleton";
 import { useScreenSize } from "@/shared/hooks/useSceenSize";
-import styles from "./CreateQuizPage.module.css";
 import { withNavSkeleton } from "@/widgets/quiz/QuizNavigation";
+import { ChooseCategoriesSkeleton } from "@/features/question/ChooseCategories";
+import { ChooseComplexitySkeleton } from "@/features/question/ChooseComplexity";
+import { ChooseModeSkeleton } from "@/features/question/ChooseMode";
+import { ChooseCountSkeleton } from "@/features/question/ChooseCount";
+import styles from "./CreateQuizPage.module.css";
 
 export const CreateQuizSkeleton = () => {
   const { isMobile, isMobileS } = useScreenSize();

@@ -1,9 +1,10 @@
-import { CompleteQuizButtonSkeleton, SwitchQuestionSkeleton } from "@/features/quiz";
 import { Card } from "@/shared/ui/Card";
 import { Flex } from "@/shared/ui/Flex";
 import { CurrentQuestionSkeleton } from "./CurrentQuestion/CurrentQuestion.skeleton";
 import { Skeleton } from "@/shared/ui/Skeleton";
 import { useScreenSize } from "@/shared/hooks/useSceenSize";
+import { SwitchQuestionSkeleton } from "@/features/quiz/SwitchQuestion";
+import { CompleteQuizButtonSkeleton } from "@/features/quiz/CompleteQuizButton";
 
 export const QuestionSliderSkeleton = () => {
   const { isMobileS } = useScreenSize();

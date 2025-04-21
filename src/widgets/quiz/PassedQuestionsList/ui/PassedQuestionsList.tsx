@@ -2,7 +2,7 @@ import { useAppSelector } from "@/shared/hooks/useAppSelector";
 import { Card } from "@/shared/ui/Card";
 import { PassedQuestionsItem } from "./PassedQuestionsItem/PassedQuestionsItem";
 import { Text } from "@/shared/ui/Text";
-import { RestartQuizButton } from "@/features/quiz";
+import { RestartQuizButton } from "@/features/quiz/RestartQuizButton";
 import mockQuestionImage from "@/shared/assets/images/mockQuestion.svg";
 import styles from "./PassedQuestionsList.module.css";
 

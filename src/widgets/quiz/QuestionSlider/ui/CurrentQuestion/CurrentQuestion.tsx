@@ -2,10 +2,11 @@ import { markQuestionAsLearned, QuizQuestion } from "@/entities/quiz";
 import { Image } from "@/shared/ui/Image";
 import { Flex } from "@/shared/ui/Flex";
 import { Text } from "@/shared/ui/Text";
-import { AnswerButtons, ShowAnswer } from "@/features/quiz";
 import { useAppDispatch } from "@/shared/hooks/useAppDispatch";
 import { useAppSelector } from "@/shared/hooks/useAppSelector";
 import { useScreenSize } from "@/shared/hooks/useSceenSize";
+import { ShowAnswer } from "@/features/quiz/ShowAnswer";
+import { AnswerButtons } from "@/features/quiz/AnswerButtons";
 import mockQuestionImage from "@/shared/assets/images/mockQuestion.svg";
 import styles from "./CurrentQuestion.module.css";
 

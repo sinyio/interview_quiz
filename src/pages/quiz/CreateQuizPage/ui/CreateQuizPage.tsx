@@ -1,20 +1,18 @@
-import {
-  ChooseCategories,
-  ChooseComplexity,
-  ChooseCount,
-  ChooseMode,
-} from "@/features/question";
 import { Card } from "@/shared/ui/Card";
 import { useFilter } from "../model/hooks/useFilter";
 import { Text } from "@/shared/ui/Text";
 import { Flex } from "@/shared/ui/Flex";
 import { useScreenSize } from "@/shared/hooks/useSceenSize";
 import { useNavigate } from "react-router-dom";
-import { StartQuizButton } from "@/features/quiz";
 import { useGetSkillsQuery } from "@/entities/skill";
 import { CreateQuizPageSkeleton } from "./CreateQuizPage.skeleton";
 import { useFilterHandlers } from "../model/hooks/useFilterHandlers";
 import { ROUTES } from "@/shared/config/router/routes";
+import { ChooseCategories } from "@/features/question/ChooseCategories";
+import { ChooseComplexity } from "@/features/question/ChooseComplexity";
+import { ChooseMode } from "@/features/question/ChooseMode";
+import { ChooseCount } from "@/features/question/ChooseCount";
+import { StartQuizButton } from "@/features/quiz/StartQuizButton";
 import styles from "./CreateQuizPage.module.css";
 
 const FRONTEND_DEVELOPER_SPECIALIZATION_ID = 11;
