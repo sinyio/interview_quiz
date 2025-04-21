@@ -1,5 +1,5 @@
 import { Flex } from "@/shared/ui/Flex";
-import { QuizNavigationSkeleton } from "../../ui/QuizNavigation/QuizNavigation.skeleton";
+import { QuizNavigationSkeleton } from "../../ui/QuizNavigation.skeleton";
 import { useScreenSize } from "@/shared/hooks/useSceenSize";
 import { ComponentType } from "react";
 

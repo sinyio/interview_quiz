@@ -8,8 +8,8 @@ import { Card } from "@/shared/ui/Card";
 import { Flex } from "@/shared/ui/Flex";
 import { Skeleton } from "@/shared/ui/Skeleton";
 import { useScreenSize } from "@/shared/hooks/useSceenSize";
-import { withNavSkeleton } from "@/widgets/quiz";
 import styles from "./CreateQuizPage.module.css";
+import { withNavSkeleton } from "@/widgets/quiz/QuizNavigation";
 
 export const CreateQuizSkeleton = () => {
   const { isMobile, isMobileS } = useScreenSize();

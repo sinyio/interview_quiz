@@ -1,7 +1,8 @@
 import { useScreenSize } from "@/shared/hooks/useSceenSize";
 import { Flex } from "@/shared/ui/Flex";
 import { JoinYeaHubSkeleton } from "@/widgets/JoinYeaHub";
-import { PassedQuestionsListSkeleton, withNavSkeleton } from "@/widgets/quiz";
+import { PassedQuestionsListSkeleton } from "@/widgets/quiz/PassedQuestionsList";
+import { withNavSkeleton } from "@/widgets/quiz/QuizNavigation";
 import { YeaHubCommunitySkeleton } from "@/widgets/YeaHubCommunity";
 
 export const QuizResultSkeleton = () => {

@@ -6,7 +6,7 @@ import { Navigate } from "react-router-dom";
 import { useScreenSize } from "@/shared/hooks/useSceenSize";
 import { ROUTES } from "@/shared/config/router/routes";
 import { YeaHubCommunity } from "@/widgets/YeaHubCommunity";
-import { PassedQuestionsList } from "@/widgets/quiz";
+import { PassedQuestionsList } from "@/widgets/quiz/PassedQuestionsList";
 
 const QuizResultPage = () => {
   const { isMobile, isMobileS } = useScreenSize();

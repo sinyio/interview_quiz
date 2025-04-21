@@ -1,6 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { QuizNavigationItem } from "./QuizNavigationItem/QuizNavigationItem";
-import { quizNavigation } from "../../model/constants/quizNavigation";
+import { quizNavigation } from "../model/constants/quizNavigation";
 import { ROUTES } from "@/shared/config/router/routes";
 import { useScreenSize } from "@/shared/hooks/useSceenSize";
 import { CaretLeft } from "@/shared/ui/Icons/CaretLeft";
