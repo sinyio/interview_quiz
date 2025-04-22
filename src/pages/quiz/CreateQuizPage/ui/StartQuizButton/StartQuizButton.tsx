@@ -1,13 +1,24 @@
 import { Button } from "@/shared/ui/Button";
 import { Flex } from "@/shared/ui/Flex";
 import { ArrowRight } from "@/shared/ui/Icons/ArrowRight/ArrowRight";
-import { ButtonHTMLAttributes } from "react";
+import { usePreparedFilters } from "../../model/usePreparedFilters";
+import { ROUTES } from "@/shared/config/router/routes";
+import { useNavigate } from "react-router-dom";
 
-interface StartQuizButton extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface StartQuizButton {
   className: string;
 }
 
 export const StartQuizButton = ({ className }: StartQuizButton) => {
+  const navigate = useNavigate();
+
+  const { preparedFilters } = usePreparedFilters();
+  const onStartQuiz = () => {
+    navigate(ROUTES.quiz.page, {
+      state: preparedFilters,
+    });
+  };
+
   return (
     <Button
       size="m"
@@ -16,6 +27,7 @@ export const StartQuizButton = ({ className }: StartQuizButton) => {
           Начать <ArrowRight />
         </Flex>
       }
+      onClick={onStartQuiz}
       className={className}
     />
   );
