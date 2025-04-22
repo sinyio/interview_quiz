@@ -13,11 +13,12 @@ export interface FilterProps {
   items: Item[];
   onClick: (id: number) => void;
   height?: number;
+  className?: string
 }
 
-export const Filter = ({ title, items, onClick, height }: FilterProps) => {
+export const Filter = ({ title, items, onClick, height, className }: FilterProps) => {
   return (
-    <div>
+    <div className={className}>
       <h3 className={styles.title}>{title}</h3>
       <div className={styles.list}>
         {items?.map((item) => (
