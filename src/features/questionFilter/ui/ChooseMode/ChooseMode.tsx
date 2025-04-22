@@ -2,7 +2,7 @@ import { Filter } from "@/shared/ui/Filter";
 import { modes } from "../../model/constants";
 
 export const ChooseMode = () => {
-  const onChooseComplexity = () => {};
+  const onChooseMode = () => {};
 
   const preparedData = modes.map((item) => ({
     id: item.id,
@@ -13,7 +13,7 @@ export const ChooseMode = () => {
   return (
     <Filter
       items={preparedData}
-      onClick={onChooseComplexity}
+      onClick={onChooseMode}
       title="Уровень сложности"
     />
   );

@@ -1,11 +1,13 @@
 import { Filter } from "@/shared/ui/Filter";
 import { useFilter } from "../../model/hooks/useFilter";
-import { useFilterHandlers } from "../../model/hooks/useFilterHandlers";
 import { complexityRanges } from "../../model/constants";
 
 export const ChooseComplexity = () => {
-  const { filter } = useFilter();
-  const { onChangeComplexity } = useFilterHandlers();
+  const { filter, updateFilter } = useFilter();
+
+  const onChangeComplexity = (complexity?: number[]) => {
+    updateFilter({ ...filter, complexity: complexity });
+  };
 
   const onChooseComplexity = (id: number) => {
     const range = complexityRanges.find((item) => item.id === id)?.value || [];

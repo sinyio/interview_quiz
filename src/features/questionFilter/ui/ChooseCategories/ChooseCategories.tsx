@@ -1,6 +1,5 @@
 import { Filter } from "@/shared/ui/Filter";
 import { useFilter } from "../../model/hooks/useFilter";
-import { useFilterHandlers } from "../../model/hooks/useFilterHandlers";
 import { FRONTEND_DEVELOPER_SPECIALIZATION_ID } from "@/entities/specialization";
 import { useGetSkillsQuery } from "@/entities/skill";
 
@@ -9,8 +8,11 @@ interface ChooseCategoriesProps {
 }
 
 export const ChooseCategories = ({ className }: ChooseCategoriesProps) => {
-  const { filter } = useFilter();
-  const { onChangeSkills } = useFilterHandlers();
+  const { filter, updateFilter } = useFilter();
+  
+  const onChangeSkills = (skills: number[]) => {
+    updateFilter({ ...filter, skills: skills });
+  };
 
   const { data: skills } = useGetSkillsQuery({
     specializations: [FRONTEND_DEVELOPER_SPECIALIZATION_ID],
