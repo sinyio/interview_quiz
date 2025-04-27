@@ -8,6 +8,7 @@ export const QuizLayout = () => {
 	return (
 		<Flex direction="column" gap={isMobileS ? '20' : '24'}>
 			<QuizNavigation />
+      <></>
 			<Outlet />
 		</Flex>
 	);
