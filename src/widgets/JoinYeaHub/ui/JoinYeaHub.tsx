@@ -18,8 +18,7 @@ export const JoinYeaHub = ({ ...props }: HTMLAttributes<HTMLDivElement>) => {
 						<Text variant="body5-strong">Развивайтесь с нами!</Text>
 					</Flex>
 					<Text variant="body2-accent" color="black-600">
-						Станьте членом сообщества YeaHub и получите полный доступ ко всем возможностям
-						платформы!
+						Станьте членом сообщества YeaHub и получите полный доступ ко всем возможностям платформы!
 					</Text>
 					<Links />
 					<Button variant="link-purple" className={styles.button}>

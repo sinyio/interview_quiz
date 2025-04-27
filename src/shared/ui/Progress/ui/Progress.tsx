@@ -21,10 +21,7 @@ export const Progress = ({ title, total, current }: ProgressProps) => {
 			<div className={styles.wrapper}>
 				<progress className={styles.progress} value={current} max={total} />
 				{isMobileS && (
-					<span
-						className={styles.count}
-						style={{ float: 'right' }}
-					>{`${current} из ${total}`}</span>
+					<span className={styles.count} style={{ float: 'right' }}>{`${current} из ${total}`}</span>
 				)}
 			</div>
 		</Flex>

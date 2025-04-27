@@ -14,14 +14,9 @@ export const QuizNavigationItem = ({ path, name, isFirst }: QuizNavigationItemPr
 	return (
 		<Flex gap="8" align="center" key={path}>
 			{!isFirst && (
-				<CaretRight
-					className={`${styles.icon} ${location.pathname === path && styles.activeIcon}`}
-				/>
+				<CaretRight className={`${styles.icon} ${location.pathname === path && styles.activeIcon}`} />
 			)}
-			<NavLink
-				className={({ isActive }) => `${styles.link} ${isActive && styles.active}`}
-				to={path}
-			>
+			<NavLink className={({ isActive }) => `${styles.link} ${isActive && styles.active}`} to={path}>
 				{name}
 			</NavLink>
 		</Flex>
