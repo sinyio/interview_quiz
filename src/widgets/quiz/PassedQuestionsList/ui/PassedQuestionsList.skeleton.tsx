@@ -7,12 +7,7 @@ import styles from './PassedQuestionsList.module.css';
 export const PassedQuestionsListSkeleton = () => {
 	return (
 		<Card>
-			<Skeleton
-				maxWidth={440}
-				height={24}
-				className={styles.title}
-				style={{ marginInline: 'auto' }}
-			/>
+			<Skeleton maxWidth={440} height={24} className={styles.title} style={{ marginInline: 'auto' }} />
 			<div className={styles.list}>
 				{[...new Array(8)].map((_, index) => (
 					<PassedQuestionsItemSkeleton key={index} />

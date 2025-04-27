@@ -29,11 +29,6 @@ export const TextSkeleton = ({
 	};
 
 	return (
-		<Skeleton
-			className={className}
-			height={skeletonHeight[variant]}
-			width={width}
-			borderRadius={8}
-		/>
+		<Skeleton className={className} height={skeletonHeight[variant]} width={width} borderRadius={8} />
 	);
 };

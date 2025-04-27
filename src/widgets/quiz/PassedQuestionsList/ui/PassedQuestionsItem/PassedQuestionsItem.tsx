@@ -18,11 +18,7 @@ export const PassedQuestionsItem = ({ imageSrc, title, isLearned }: PassedQuesti
 		<Flex gap="20">
 			<Image imageSrc={imageSrc} alt={title} className={styles.image} />
 			<Flex gap="8" direction="column">
-				<Text
-					variant={isMobileS ? 'body3-accent' : 'body4'}
-					color="black-800"
-					className={styles.title}
-				>
+				<Text variant={isMobileS ? 'body3-accent' : 'body4'} color="black-800" className={styles.title}>
 					{title}
 				</Text>
 				{isLearned ? <IsLearnedChip learned active /> : <IsLearnedChip />}

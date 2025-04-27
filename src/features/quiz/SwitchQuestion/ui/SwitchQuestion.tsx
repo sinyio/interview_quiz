@@ -20,11 +20,7 @@ export const SwitchQuestion = () => {
 
 	return (
 		<Flex justify="between">
-			<ArrowButton
-				variant="back"
-				disabled={currentQuestion === 1}
-				onClick={handlePreviousQusetion}
-			/>
+			<ArrowButton variant="back" disabled={currentQuestion === 1} onClick={handlePreviousQusetion} />
 			<ArrowButton
 				variant="next"
 				disabled={currentQuestion === totalQuestions}

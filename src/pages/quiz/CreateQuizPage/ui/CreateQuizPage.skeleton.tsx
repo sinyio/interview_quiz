@@ -19,10 +19,7 @@ export const CreateQuizSkeleton = () => {
 			<Flex direction="column" gap={isMobileS ? '24' : '48'}>
 				<Flex direction="column" gap={isMobileS ? '16' : '24'}>
 					<Skeleton width={200} height={isMobileS ? 24 : 28} borderRadius={12} />
-					<Flex
-						gap={isMobileS ? '16' : isMobile ? '24' : '48'}
-						direction={isMobile ? 'column' : 'row'}
-					>
+					<Flex gap={isMobileS ? '16' : isMobile ? '24' : '48'} direction={isMobile ? 'column' : 'row'}>
 						<div style={{ flexBasis: '60%' }}>
 							<ChooseCategoriesSkeleton />
 						</div>

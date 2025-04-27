@@ -8,6 +8,10 @@ export const QuizLayout = () => {
 	return (
 		<Flex direction="column" gap={isMobileS ? '20' : '24'}>
 			<QuizNavigation />
+<<<<<<< Updated upstream
+=======
+			<></>
+>>>>>>> Stashed changes
 			<Outlet />
 		</Flex>
 	);

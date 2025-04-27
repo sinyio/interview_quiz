@@ -30,10 +30,7 @@ const CreateQuizPage = () => {
 					<Text variant="h1" className={styles.title}>
 						Собеседование
 					</Text>
-					<Flex
-						gap={isMobileS ? '16' : isMobile ? '24' : '48'}
-						direction={isMobile ? 'column' : 'row'}
-					>
+					<Flex gap={isMobileS ? '16' : isMobile ? '24' : '48'} direction={isMobile ? 'column' : 'row'}>
 						<ChooseCategories className={styles.wrapper} />
 						<Flex direction="column" gap={isMobileS ? '16' : '24'}>
 							<ChooseComplexity />
