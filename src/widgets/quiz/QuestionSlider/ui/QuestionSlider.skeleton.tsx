@@ -7,15 +7,15 @@ import { SwitchQuestionSkeleton } from '@/features/quiz/SwitchQuestion';
 import { CompleteQuizButtonSkeleton } from '@/features/quiz/CompleteQuizButton';
 
 export const QuestionSliderSkeleton = () => {
-  const { isMobileS } = useScreenSize();
-  return (
-    <Card>
-      <Flex direction="column" gap={isMobileS ? '16' : '24'}>
-        <SwitchQuestionSkeleton />
-        <CurrentQuestionSkeleton />
-        <Skeleton height={1} />
-        <CompleteQuizButtonSkeleton />
-      </Flex>
-    </Card>
-  );
+	const { isMobileS } = useScreenSize();
+	return (
+		<Card>
+			<Flex direction="column" gap={isMobileS ? '16' : '24'}>
+				<SwitchQuestionSkeleton />
+				<CurrentQuestionSkeleton />
+				<Skeleton height={1} />
+				<CompleteQuizButtonSkeleton />
+			</Flex>
+		</Card>
+	);
 };

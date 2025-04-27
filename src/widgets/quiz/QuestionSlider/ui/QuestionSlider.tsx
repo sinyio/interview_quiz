@@ -12,27 +12,27 @@ import { SwitchQuestion } from '@/features/quiz/SwitchQuestion';
 import { CompleteQuizButton } from '@/features/quiz/CompleteQuizButton';
 
 export const QuestionSlider = () => {
-  const { isMobileS } = useScreenSize();
+	const { isMobileS } = useScreenSize();
 
-  const questions = useAppSelector((state) => state.quiz.questions);
-  const currentQuestion = useAppSelector((state) => state.quiz.currentQuestion);
+	const questions = useAppSelector((state) => state.quiz.questions);
+	const currentQuestion = useAppSelector((state) => state.quiz.currentQuestion);
 
-  const dispatch = useAppDispatch();
-  const navigate = useNavigate();
+	const dispatch = useAppDispatch();
+	const navigate = useNavigate();
 
-  const onCompleteQuiz = () => {
-    dispatch(completeQuiz());
-    navigate(ROUTES.quiz.result);
-  };
+	const onCompleteQuiz = () => {
+		dispatch(completeQuiz());
+		navigate(ROUTES.quiz.result);
+	};
 
-  return (
-    <Card>
-      <Flex direction="column" gap={isMobileS ? '16' : '24'}>
-        <SwitchQuestion />
-        <CurrentQuestion question={questions[currentQuestion - 1]} />
-        <Separator />
-        <CompleteQuizButton onClick={onCompleteQuiz} />
-      </Flex>
-    </Card>
-  );
+	return (
+		<Card>
+			<Flex direction="column" gap={isMobileS ? '16' : '24'}>
+				<SwitchQuestion />
+				<CurrentQuestion question={questions[currentQuestion - 1]} />
+				<Separator />
+				<CompleteQuizButton onClick={onCompleteQuiz} />
+			</Flex>
+		</Card>
+	);
 };

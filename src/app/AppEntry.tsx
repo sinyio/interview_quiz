@@ -8,7 +8,7 @@ import './styles/variables/typography.css';
 import './styles/variables/buttons.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <StoreProvider>
-    <RouterProvider />
-  </StoreProvider>,
+	<StoreProvider>
+		<RouterProvider />
+	</StoreProvider>,
 );
