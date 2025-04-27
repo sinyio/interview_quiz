@@ -9,11 +9,11 @@
 		"plugin:@typescript-eslint/recommended",
 		"plugin:react/recommended",
 		"plugin:react-hooks/recommended",
-		"prettier",
 		"plugin:@conarti/feature-sliced/recommended",
 		"plugin:jsx-a11y/recommended",
 		"@feature-sliced",
-		"@feature-sliced/eslint-config/rules/import-order/experimental"
+		"@feature-sliced/eslint-config/rules/import-order/experimental",
+		"prettier"
 	],
 	"parser": "@typescript-eslint/parser",
 	"parserOptions": {
