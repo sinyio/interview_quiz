@@ -8,21 +8,21 @@ import { QuizProgress } from '@/widgets/quiz/QuizProgress';
 import { QuestionSlider } from '@/widgets/quiz/QuestionSlider';
 
 export const QuizPage = () => {
-	const { isMobile, isMobileS } = useScreenSize();
+  const { isMobile, isMobileS } = useScreenSize();
 
-	const location = useLocation();
+  const location = useLocation();
 
-	const { isLoading } = useGetQuizQuery(location.state);
+  const { isLoading } = useGetQuizQuery(location.state);
 
-	if (!location.state) return <Navigate to={ROUTES.quiz.create} replace />;
-	if (isLoading) return <QuizPageSkeleton />;
+  if (!location.state) return <Navigate to={ROUTES.quiz.create} replace />;
+  if (isLoading) return <QuizPageSkeleton />;
 
-	return (
-		<Flex direction="column" gap={isMobileS ? '16' : isMobile ? '20' : '24'}>
-			<QuizProgress />
-			<QuestionSlider />
-		</Flex>
-	);
+  return (
+    <Flex direction="column" gap={isMobileS ? '16' : isMobile ? '20' : '24'}>
+      <QuizProgress />
+      <QuestionSlider />
+    </Flex>
+  );
 };
 
 export default QuizPage;

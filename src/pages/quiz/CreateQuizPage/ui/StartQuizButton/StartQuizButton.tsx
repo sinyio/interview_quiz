@@ -6,29 +6,29 @@ import { ROUTES } from '@/shared/config/router/routes';
 import { useNavigate } from 'react-router-dom';
 
 interface StartQuizButton {
-	className: string;
+  className: string;
 }
 
 export const StartQuizButton = ({ className }: StartQuizButton) => {
-	const navigate = useNavigate();
+  const navigate = useNavigate();
 
-	const { preparedFilters } = usePreparedFilters();
-	const onStartQuiz = () => {
-		navigate(ROUTES.quiz.page, {
-			state: preparedFilters,
-		});
-	};
+  const { preparedFilters } = usePreparedFilters();
+  const onStartQuiz = () => {
+    navigate(ROUTES.quiz.page, {
+      state: preparedFilters,
+    });
+  };
 
-	return (
-		<Button
-			size="m"
-			children={
-				<Flex gap="8" justify="center" align="center">
-					Начать <ArrowRight />
-				</Flex>
-			}
-			onClick={onStartQuiz}
-			className={className}
-		/>
-	);
+  return (
+    <Button
+      size="m"
+      children={
+        <Flex gap="8" justify="center" align="center">
+          Начать <ArrowRight />
+        </Flex>
+      }
+      onClick={onStartQuiz}
+      className={className}
+    />
+  );
 };

@@ -1,6 +1,6 @@
 {
-	"subscription": {
-		"free": "Бесплатно/месяц",
-		"price": "{{price}}₽/месяц"
-	}
+  "subscription": {
+    "free": "Бесплатно/месяц",
+    "price": "{{price}}₽/месяц"
+  }
 }

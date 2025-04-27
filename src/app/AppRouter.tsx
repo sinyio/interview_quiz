@@ -9,19 +9,19 @@ import { Error404Page } from '@/pages/Error404Page';
 import { ROUTES } from '@/shared/config/router/routes';
 
 export const router = createBrowserRouter([
-	{
-		element: <MainLayout />,
-		children: [
-			{ path: ROUTES.main, element: <MainPage /> },
-			{ path: '*', element: <Error404Page /> },
-			{
-				element: <QuizLayout />,
-				children: [
-					{ path: ROUTES.quiz.create, element: <CreateQuizPage /> },
-					{ path: ROUTES.quiz.page, element: <QuizPage /> },
-					{ path: ROUTES.quiz.result, element: <QuizResultPage /> },
-				],
-			},
-		],
-	},
+  {
+    element: <MainLayout />,
+    children: [
+      { path: ROUTES.main, element: <MainPage /> },
+      { path: '*', element: <Error404Page /> },
+      {
+        element: <QuizLayout />,
+        children: [
+          { path: ROUTES.quiz.create, element: <CreateQuizPage /> },
+          { path: ROUTES.quiz.page, element: <QuizPage /> },
+          { path: ROUTES.quiz.result, element: <QuizResultPage /> },
+        ],
+      },
+    ],
+  },
 ]);
