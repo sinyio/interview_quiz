@@ -1,3 +1,4 @@
 *.ts tabwidth=2
 *.tsx tabwidth=2
 *.json tabwidth=2
+*.eslintrc.json tabwidth=2
