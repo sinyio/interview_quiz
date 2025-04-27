@@ -1,2 +1,2 @@
-export { RestartQuizButton } from "./ui/RestartQuizButton";
-export { RestartQuizButtonSkeleton } from "./ui/RestartQuizButton.skeleton";
+export { RestartQuizButton } from './ui/RestartQuizButton';
+export { RestartQuizButtonSkeleton } from './ui/RestartQuizButton.skeleton';

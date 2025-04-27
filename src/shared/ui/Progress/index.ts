@@ -1,1 +1,1 @@
-export { Progress } from "./ui/Progress";
+export { Progress } from './ui/Progress';

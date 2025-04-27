@@ -1,1 +1,1 @@
-export * from './ui/Flex'
+export * from './ui/Flex';

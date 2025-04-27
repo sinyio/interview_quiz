@@ -1,1 +1,1 @@
-export { ThumbsUp } from "./ThumbsUp";
+export { ThumbsUp } from './ThumbsUp';

@@ -1,3 +1,3 @@
-import { lazy } from "react";
+import { lazy } from 'react';
 
-export const CreateQuizPage = lazy(() => import('./CreateQuizPage'))
+export const CreateQuizPage = lazy(() => import('./CreateQuizPage'));

@@ -1,1 +1,1 @@
-export { SealCheck } from "./SealCheck";
+export { SealCheck } from './SealCheck';

@@ -1,1 +1,1 @@
-export { UserSwitch } from "./UserSwitch";
+export { UserSwitch } from './UserSwitch';

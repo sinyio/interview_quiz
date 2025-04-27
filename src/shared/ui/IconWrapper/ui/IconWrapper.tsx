@@ -1,14 +1,14 @@
-import { HTMLAttributes, PropsWithChildren } from "react";
-import styles from "./IconWrapper.module.css";
+import { HTMLAttributes, PropsWithChildren } from 'react';
+import styles from './IconWrapper.module.css';
 
 export const IconWrapper = ({
-  children,
-  className,
-  ...props
+	children,
+	className,
+	...props
 }: PropsWithChildren & HTMLAttributes<HTMLDivElement>) => {
-  return (
-    <div className={`${styles.iconWrapper} ${className}`} {...props}>
-      {children}
-    </div>
-  );
+	return (
+		<div className={`${styles.iconWrapper} ${className}`} {...props}>
+			{children}
+		</div>
+	);
 };

@@ -1,3 +1,3 @@
-import { lazy } from "react";
+import { lazy } from 'react';
 
-export const Error404Page = lazy(() => import('./Error404Page'))
+export const Error404Page = lazy(() => import('./Error404Page'));
