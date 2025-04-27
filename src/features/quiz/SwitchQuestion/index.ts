@@ -1,2 +1,2 @@
-export { SwitchQuestion } from "./ui/SwitchQuestion";
-export { SwitchQuestionSkeleton } from "./ui/SwitchQuestion.skeleton";
+export { SwitchQuestion } from './ui/SwitchQuestion';
+export { SwitchQuestionSkeleton } from './ui/SwitchQuestion.skeleton';

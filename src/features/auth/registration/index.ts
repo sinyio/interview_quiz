@@ -1,1 +1,1 @@
-export * from "./ui/RegistrationButton/RegistrationButton";
+export * from './ui/RegistrationButton/RegistrationButton';

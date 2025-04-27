@@ -1,2 +1,2 @@
-export { QuizProgress } from "./ui/QuizProgress";
-export { QuizProgressSkeleton } from "./ui/QuizProgress.skeleton";
+export { QuizProgress } from './ui/QuizProgress';
+export { QuizProgressSkeleton } from './ui/QuizProgress.skeleton';

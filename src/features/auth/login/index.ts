@@ -1,1 +1,1 @@
-export { LoginButton } from "./ui/LoginButton/LoginButton";
+export { LoginButton } from './ui/LoginButton/LoginButton';

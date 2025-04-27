@@ -1,1 +1,1 @@
-export { ClipboardText } from "./ClipboardText";
+export { ClipboardText } from './ClipboardText';

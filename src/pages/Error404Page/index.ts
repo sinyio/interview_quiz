@@ -1,1 +1,1 @@
-export { Error404Page } from "./ui/Error404Page.lazy";
+export { Error404Page } from './ui/Error404Page.lazy';

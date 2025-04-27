@@ -1,1 +1,1 @@
-export { CaretLeft } from "./CaretLeft";
+export { CaretLeft } from './CaretLeft';

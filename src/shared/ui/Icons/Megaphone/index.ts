@@ -1,1 +1,1 @@
-export { Megaphone } from "./Megaphone";
+export { Megaphone } from './Megaphone';

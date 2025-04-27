@@ -1,1 +1,1 @@
-export { TrendUp } from "./TrendUp";
+export { TrendUp } from './TrendUp';

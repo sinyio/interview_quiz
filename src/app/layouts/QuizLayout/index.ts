@@ -1,1 +1,1 @@
-export { QuizLayout } from "./ui/QuizLayout";
+export { QuizLayout } from './ui/QuizLayout';

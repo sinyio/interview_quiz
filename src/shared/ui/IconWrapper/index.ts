@@ -1,1 +1,1 @@
-export { IconWrapper } from "./ui/IconWrapper";
+export { IconWrapper } from './ui/IconWrapper';

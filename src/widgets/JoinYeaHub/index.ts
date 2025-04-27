@@ -1,2 +1,2 @@
-export { JoinYeaHub } from "./ui/JoinYeaHub";
-export { JoinYeaHubSkeleton } from "./ui/JoinYeaHub.skeleton";
+export { JoinYeaHub } from './ui/JoinYeaHub';
+export { JoinYeaHubSkeleton } from './ui/JoinYeaHub.skeleton';
