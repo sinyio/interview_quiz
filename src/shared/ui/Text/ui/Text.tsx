@@ -6,22 +6,22 @@ import styles from './Text.module.css';
 import React from 'react';
 
 export interface TextProps {
-	variant: TextVariant;
-	children: ReactNode;
-	color?: Pallete;
-	className?: string;
+  variant: TextVariant;
+  children: ReactNode;
+  color?: Pallete;
+  className?: string;
 }
 
 export const Text = ({
-	variant = 'body1',
-	color = 'black-900',
-	children,
-	className,
+  variant = 'body1',
+  color = 'black-900',
+  children,
+  className,
 }: TextProps) => {
-	const Tag = variant.startsWith('body') ? 'p' : variant;
-	return React.createElement(
-		Tag,
-		{ className: cn(styles[variant], styles[color], className) },
-		children,
-	);
+  const Tag = variant.startsWith('body') ? 'p' : variant;
+  return React.createElement(
+    Tag,
+    { className: cn(styles[variant], styles[color], className) },
+    children,
+  );
 };
